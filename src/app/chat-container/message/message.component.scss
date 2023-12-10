@@ -1,0 +1,27 @@
+@keyframes float-up {
+  0%  { transform: translate(0, 10px); }
+  100%   { transform: translate(0, 0px); }
+}
+
+.message {
+  height: fit-content;
+  white-space: pre-wrap;
+  animation-name: float-up;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in-out;
+  box-shadow: 1px 3px 4px var(--grey);
+
+  .message-text {
+    padding: 6px;
+  }
+
+  &.user {
+    background-color: var(--light-purple);
+    border-radius: 5px 0 5px 5px
+  }
+
+  &.system {
+    background-color: var(--light-pink);
+    border-radius: 0 5px 5px 5px
+  }
+}

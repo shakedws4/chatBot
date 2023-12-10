@@ -1,0 +1,29 @@
+
+.chat-web {
+  display: flex;
+  flex-direction: row;
+
+  .vertical-separator {
+    height: 200px;
+    width:2px;
+    background: linear-gradient(var(--purple) 10%, var(--pink) 60%, var(--red) 100%);
+    margin: 0 50px;
+  }
+
+  .chat {
+    visibility: hidden;
+    opacity: 0;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.5s linear;
+    }
+
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s 0.5s, opacity 0.5s linear;
+    }
+  }
+}

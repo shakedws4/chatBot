@@ -1,0 +1,18 @@
+<div class="chat-container">
+  <div class="messages" #messagesContainer>
+    <app-message class="chat-message" [class]="message.author" *ngFor="let message of messages"  [message]="message"></app-message>
+  </div>
+  <div class="prompt" [formGroup]="form">
+    <div class="wrap">
+              <textarea #textArea
+                        oninput="this.parentNode.dataset.replicatedValue = this.value"
+                        class="text-area"
+                        formControlName="input"
+                        placeholder="Enter message"
+                        (keydown.enter)="onEnterClick($event)"
+                        rows="2"
+              ></textarea>
+    </div>
+    <app-circle-button class="send-button" icon="../../assets/svg/paper-plane-top.svg" size="s" (buttonClick)="sendMessage()"></app-circle-button>
+  </div>
+</div>
