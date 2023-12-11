@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {ChatContainerComponent} from "./chat-container/chat-container.component";
 import {CircleButtonComponent} from "./chat-container/circle-button/circle-button.component";
+import {tabTitle, header} from "../config";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import {CircleButtonComponent} from "./chat-container/circle-button/circle-butto
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  public title = 'chatApp';
+  public title = tabTitle;
+  public header = header;
   public isOpen = false;
   public toggleChat(): void {
     this.isOpen = !this.isOpen;

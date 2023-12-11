@@ -9,6 +9,11 @@
   background-image: linear-gradient(white, white), radial-gradient(circle at top left,#5e5eea 10%, #e779d0 60%, #98164c 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  transition: 0.5s;
+
+  &:hover {
+    transform: rotate(360deg);
+  }
 
   &.s {
     height: 30px;
